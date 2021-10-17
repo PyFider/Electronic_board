@@ -15,7 +15,7 @@ w["bg"] = "#0A5432"
 w.eval('tk::PlaceWindow . center') # Window in center
 w.geometry("1000x700")
 w.attributes('-fullscreen', True)
-w.iconbitmap(r"icon.ico")
+w.iconbitmap(r"C:\Users\user\Desktop\все файлы\Python\Python projects\Электронная доска\icon.ico")
 
 # Func colors
 def white_mel():
@@ -156,12 +156,14 @@ def yellow_mel_all():
 	eraser_color = "yellow"
 
 def palitra_all():
-	global color, color_figure
+	global color, color_figure, eraser_color
 	color_palitra_all = colorchooser.askcolor() # Переменная нужна для последующего указания индекса указа текста
+	eraser_color_palitra_all = color_palitra_all[1]
+	eraser_color = eraser_color_palitra_all
 	c.create_oval(0, 0, 50, 50, outline = color_palitra_all[1], fill = color_palitra_all[1], width = 10000)
 
 # Figures
-# triangles
+# Triangles
 def equilateral_triangle():
 	c.create_line(50, 220, 130, 50, width = 7, fill = color_figure)
 	c.create_line(130, 50, 210, 220, width = 7, fill = color_figure)
