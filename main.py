@@ -1,9 +1,9 @@
 # Import Modules
 from tkinter import *
 from tkinter import messagebox
+from tkinter import colorchooser
 
 font_size = 7 # Size background and pen
-font_size_choose_mel = 7 # choose size pen
 color = "white" # Color pen
 color_figure = "white" # Color figures
 eraser_color = "#0A5432" # Eraser color
@@ -15,332 +15,221 @@ w["bg"] = "#0A5432"
 w.eval('tk::PlaceWindow . center') # Window in center
 w.geometry("1000x700")
 w.attributes('-fullscreen', True)
-w.iconbitmap(r"icon.ico")
+w.iconbitmap(r"C:\Users\user\Desktop\все файлы\Python\Python projects\Электронная доска\icon.ico")
 
 # Func colors
 def white_mel():
-	global font_size, color, menu, font_size_choose_mel, font_size_choose_mel, color_figure
+	global font_size, color, color_figure
 	color = "white"
 	color_figure = "white"
-	font_size = font_size_choose_mel
 
 def grey_mel():
-	global font_size, color, menu, font_size_choose_mel, font_size_choose_mel, color_figure
+	global font_size, color, color_figure
 	color = "grey"
 	color_figure = "grey"
-	font_size = font_size_choose_mel
 
 def black_mel():
-	global font_size, color, menu, font_size_choose_mel, font_size_choose_mel, color_figure
+	global font_size, color, color_figure
 	color = "black"
 	color_figure = "black"
-	font_size = font_size_choose_mel
 
 def purple_mel():
-	global font_size, color, menu, font_size_choose_mel, font_size_choose_mel, color_figure
+	global font_size, color, color_figure
 	color = "purple"
 	color_figure = "purple"
-	font_size = font_size_choose_mel
 
 def blue_mel():
-	global font_size, color, menu, font_size_choose_mel, font_size_choose_mel, color_figure
+	global font_size, color, color_figure
 	color = "blue"
 	color_figure = "blue"
-	font_size = font_size_choose_mel
 
 def magenta_mel():
-	global font_size, color, menu, font_size_choose_mel, font_size_choose_mel, color_figure
+	global font_size, color, color_figure
 	color = "magenta"
 	color_figure = "magenta"
-	font_size = font_size_choose_mel
 
 def rose_mel():
-	global font_size, color, menu, font_size_choose_mel, font_size_choose_mel, color_figure
+	global font_size, color, color_figure
 	color = "#F66CB7"
 	color_figure = "#F66CB7"
-	font_size = font_size_choose_mel
 
 def red_mel():
-	global font_size, color, menu, font_size_choose_mel, font_size_choose_mel, color_figure
+	global font_size, color, menu, color_figure
 	color = "red"
 	color_figure = "red"
-	font_size = font_size_choose_mel
 
 def cyan_mel():
-	global font_size, color, menu, font_size_choose_mel, font_size_choose_mel, color_figure
+	global font_size, color, color_figure
 	color = "#23FFF2"
 	color_figure = "#23FFF2"
-	font_size = font_size_choose_mel
 
 def orange_mel():
-	global font_size, color, menu, font_size_choose_mel, font_size_choose_mel, color_figure
+	global font_size, color, color_figure
 	color = "orange"
 	color_figure = "orange"
-	font_size = font_size_choose_mel
 
 def dark_green_mel():
-	global font_size, color, menu, font_size_choose_mel, font_size_choose_mel, color_figure
+	global font_size, color, color_figure
 	color = "#0A5432"
 	color_figure = "#0A5432"
-	font_size = font_size_choose_mel
 
 def green_mel():
-	global font_size, color, menu, font_size_choose_mel, font_size_choose_mel, color_figure
+	global font_size, color, color_figure
 	color = "#00FF00"
 	color_figure = "#00FF00"
-	font_size = font_size_choose_mel
 
 def yellow_mel():
-	global font_size, color, menu, font_size_choose_mel, font_size_choose_mel, color_figure
+	global font_size, color, color_figure
 	color = "yellow"
 	color_figure = "yellow"
-	font_size = font_size_choose_mel
+
+def palitra():
+	global color, color_figure
+	color_palitra = colorchooser.askcolor() # Переменная нужна для последующего указания индекса указа текста
+	color = color_palitra[1]
+	color_figure = color_palitra[1]
 
 # All in mel color func
 def standart_mel_all():
-	global color, font_size, eraser_color
-	color = "#0A5432"
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = "#0A5432", fill = "#0A5432", width = 10000)
 	eraser_color = "#0A5432"
-	font_size = 2000	
 
 def white_mel_all():
-	global color, font_size, eraser_color
-	color = "white"
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = "white", fill = "white", width = 10000)
 	eraser_color = "white"
-	font_size = 2000
 
 def grey_mel_all():
-	global color, font_size, eraser_color
-	color = "grey"
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = "grey", fill = "grey", width = 10000)
 	eraser_color = "grey"
-	font_size = 2000
 
 def black_mel_all():
-	global color, font_size, eraser_color
-	color = "black"
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = "black", fill = "black", width = 10000)
 	eraser_color = "black"
-	font_size = 2000
 
 def purple_mel_all():
-	global color, font_size, eraser_color
-	color = "purple"
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = "purple", fill = "purple", width = 10000)
 	eraser_color = "purple"
-	font_size = 2000
 
 def blue_mel_all():
-	global color, font_size, eraser_color
-	color = "blue"
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = "blue", fill = "blue", width = 10000)
 	eraser_color = "blue"
-	font_size = 2000
 
 def magenta_mel_all():
-	global color, font_size, eraser_color
-	color = "magenta"
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = "magenta", fill = "magenta", width = 10000)
 	eraser_color = "magenta"
-	font_size = 2000
 
 def rose_mel_all():
-	global color, font_size, eraser_color
-	color = "#F66CB7"
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = "#F66CB7", fill = "#F66CB7", width = 10000)
 	eraser_color = "#F66CB7"
-	font_size = 2000
 
 def red_mel_all():
-	global color, font_size, eraser_color
-	color = "red"
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = "red", fill = "red", width = 10000)
 	eraser_color = "red"
-	font_size = 2000
 
 def cyan_mel_all():
-	global color, font_size, eraser_color
-	color = "#23FFF2"
-	font_size = 2000
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = "#23FFF2", fill = "#23FFF2", width = 10000)
+	eraser_color = "#23FFF2"
 
 def orange_mel_all():
-	global color, font_size, eraser_color
-	color = "orange"
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = "orange", fill = "orange", width = 10000)
 	eraser_color = "orange"
-	font_size = 2000
 
 def green_mel_all():
-	global color, font_size, eraser_color
-	color = "green"
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = "green", fill = "green", width = 10000)
 	eraser_color = "green"
-	font_size = 2000
 
 def yellow_mel_all():
-	global color, font_size, eraser_color
-	color = "yellow"
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = "yellow", fill = "yellow", width = 10000)
 	eraser_color = "yellow"
-	font_size = 2000
 
-# Func size
-def mel_size_1():
-	global font_size_choose_mel
-	font_size_choose_mel = 1
-
-def mel_size_5():
-	global font_size_choose_mel
-	font_size_choose_mel = 5
-
-def mel_size_7():
-	global font_size_choose_mel
-	font_size_choose_mel = 7
-
-def mel_size_10():
-	global font_size_choose_mel
-	font_size_choose_mel = 10
-
-def mel_size_15():
-	global font_size_choose_mel
-	font_size_choose_mel = 15
-
-def mel_size_20():
-	global font_size_choose_mel
-	font_size_choose_mel = 20
-
-def mel_size_25():
-	global font_size_choose_mel
-	font_size_choose_mel = 25
-
-def mel_size_30():
-	global font_size_choose_mel
-	font_size_choose_mel = 30
-
-def mel_size_35():
-	global font_size_choose_mel
-	font_size_choose_mel = 35
-
-def mel_size_40():
-	global font_size_choose_mel
-	font_size = 40
-
-def mel_size_45():
-	global font_size_choose_mel
-	font_size_choose_mel = 45
-
-def mel_size_50():
-	global font_size_choose_mel
-	font_size_choose_mel = 50
-
-def mel_size_55():
-	global font_size_choose_mel
-	font_size_choose_mel = 55
-
-def mel_size_60():
-	global font_size_choose_mel
-	font_size_choose_mel = 60
-
-def mel_size_65():
-	global font_size_choose_mel
-	font_size_choose_mel = 65
-
-def mel_size_70():
-	global font_size_choose_mel
-	font_size_choose_mel = 70
-
-def mel_size_75():
-	global font_size_choose_mel
-	font_size_choose_mel = 75
-
-def mel_size_80():
-	global font_size_choose_mel
-	font_size_choose_mel = 80
-
-def mel_size_85():
-	global font_size_choose_mel
-	font_size_choose_mel = 85
-
-def mel_size_90():
-	global font_size_choose_mel
-	font_size_choose_mel = 90
-
-def mel_size_95():
-	global font_size_choose_mel
-	font_size_choose_mel = 95
-
-def mel_size_100():
-	global font_size_choose_mel
-	font_size_choose_mel = 100
-
+def palitra_all():
+	global color, color_figure
+	color_palitra_all = colorchooser.askcolor() # Переменная нужна для последующего указания индекса указа текста
+	c.create_oval(0, 0, 50, 50, outline = color_palitra_all[1], fill = color_palitra_all[1], width = 10000)
 
 # Figures
 # triangles
 def equilateral_triangle():
-	c.create_line(50, 220, 130, 50, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(130, 50, 210, 220, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(50, 220, 210, 220, width = font_size_choose_mel, fill = color_figure)
+	c.create_line(50, 220, 130, 50, width = 7, fill = color_figure)
+	c.create_line(130, 50, 210, 220, width = 7, fill = color_figure)
+	c.create_line(50, 220, 210, 220, width = 7, fill = color_figure)
 
 def right_triangle():
-	c.create_line(50, 200, 50, 50, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(50, 200, 500, 200, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(500, 200, 50, 50, width = font_size_choose_mel, fill = color_figure)
+	c.create_line(50, 200, 50, 50, width = 7, fill = color_figure)
+	c.create_line(50, 200, 500, 200, width = 7, fill = color_figure)
+	c.create_line(500, 200, 50, 50, width = 7, fill = color_figure)
 
 def random_triangle():
-	c.create_line(50, 200, 140, 50, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(140, 50, 300, 200, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(50, 200, 300, 200, width = font_size_choose_mel, fill = color_figure)
+	c.create_line(50, 200, 140, 50, width = 7, fill = color_figure)
+	c.create_line(140, 50, 300, 200, width = 7, fill = color_figure)
+	c.create_line(50, 200, 300, 200, width = 7, fill = color_figure)
 
 # Quadrilateral
 def parallelogram():
-	c.create_line(50, 200, 140, 50, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(50, 200, 350, 200, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(350, 200, 440, 50, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(140, 50, 440, 50, width = font_size_choose_mel, fill = color_figure)
+	c.create_line(50, 200, 140, 50, width = 7, fill = color_figure)
+	c.create_line(50, 200, 350, 200, width = 7, fill = color_figure)
+	c.create_line(350, 200, 440, 50, width = 7, fill = color_figure)
+	c.create_line(140, 50, 440, 50, width = 7, fill = color_figure)
 
 def isosceles_trapezoid():
-	c.create_line(50, 200, 140, 50, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(50, 200, 440, 200, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(440, 200, 350, 50, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(140, 50, 350, 50, width = font_size_choose_mel, fill = color_figure)
+	c.create_line(50, 200, 140, 50, width = 7, fill = color_figure)
+	c.create_line(50, 200, 440, 200, width = 7, fill = color_figure)
+	c.create_line(440, 200, 350, 50, width = 7, fill = color_figure)
+	c.create_line(140, 50, 350, 50, width = 7, fill = color_figure)
 
 def arbitrary_trapezoid():
-	c.create_line(50, 200, 200, 50, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(50, 200, 440, 200, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(440, 200, 390, 50, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(200, 50, 390, 50, width = font_size_choose_mel, fill = color_figure)
+	c.create_line(50, 200, 200, 50, width = 7, fill = color_figure)
+	c.create_line(50, 200, 440, 200, width = 7, fill = color_figure)
+	c.create_line(440, 200, 390, 50, width = 7, fill = color_figure)
+	c.create_line(200, 50, 390, 50, width = 7, fill = color_figure)
 
 def rectangular_trapezoid():
-	c.create_line(50, 200, 50, 50, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(50, 200, 440, 200, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(440, 200, 300, 50, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(50, 50, 300, 50, width = font_size_choose_mel, fill = color_figure)
+	c.create_line(50, 200, 50, 50, width = 7, fill = color_figure)
+	c.create_line(50, 200, 440, 200, width = 7, fill = color_figure)
+	c.create_line(440, 200, 300, 50, width = 7, fill = color_figure)
+	c.create_line(50, 50, 300, 50, width = 7, fill = color_figure)
 
 def arbitrary_quadrilateral():
-	c.create_line(50, 200, 20, 30, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(50, 200, 500, 177, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(500, 177, 535, 40, width = font_size_choose_mel, fill = color_figure)
-	c.create_line(25, 30, 535, 40, width = font_size_choose_mel, fill = color_figure)
+	c.create_line(50, 200, 20, 30, width = 7, fill = color_figure)
+	c.create_line(50, 200, 500, 177, width = 7, fill = color_figure)
+	c.create_line(500, 177, 535, 40, width = 7, fill = color_figure)
+	c.create_line(25, 30, 535, 40, width = 7, fill = color_figure)
 
 # Other Func
-def text_user(event):
-	global font_size, color
+current_x, current_y = 0,0
+def locate_xy(event):
+    global current_x, current_y
+    current_x, current_y = event.x, event.y
 
-	x1 = event.x - font_size
-	x2 = event.x + font_size
-	
-	y1 = event.y - font_size
-	y2 = event.y + font_size
-
-	oval = c.create_oval(x1,
-	y1,
-	x2,
-	y2,
-	fill = color,
-	outline = color)
+def addLine(event):
+    global current_x, current_y
+    c.create_line((current_x,current_y,event.x,event.y),fill = color, width = 7)
+    current_x, current_y = event.x, event.y
 
 def clear():
-	c.delete("all")
+	global eraser_color
+	c.create_oval(0, 0, 50, 50, outline = eraser_color, fill = eraser_color, width = 10000)
 
 def eraser():
-	global font_size, color, menu
+	global color, menu
 	color = eraser_color
-	font_size = 30
 
 def mel_use():
-	global font_size, color, menu, font_size_choose_mel
+	global color, menu
 	color = "white"
-	font_size = font_size_choose_mel
 
 def full_screen_true():
 	w.attributes('-fullscreen', True)
@@ -349,7 +238,7 @@ def full_screen_false():
 	w.attributes('-fullscreen', False)
 
 def info():
-	messagebox.showinfo("Info", "Электронная доска v 1.3.0")
+	messagebox.showinfo("Info", "Электронная доска v Alpha 1.5.5")
 
 def sponsor():
 	messagebox.showinfo("Info about Kostya and Roma", "Sponsors Kostya and Roma :)")
@@ -365,7 +254,8 @@ def exit():
 c = Canvas(w, bg = "#0A5432", cursor = "circle")
 c.place(relx = 0, rely = 0, relwidth = 1, relheight = 1)
 
-c.bind("<B1-Motion>", text_user) # Mouse control(B1 - lkm, B3 - rkm, B2 - centralkm)
+c.bind('<Button-1>', locate_xy) # Mouse control(B1 - lkm, B3 - rkm, B2 - centralkm)
+c.bind('<B1-Motion>',addLine)
 
 # Menu widget
 menu = Menu(w, tearoff = False) # Tearoff - ------ is false
@@ -375,9 +265,7 @@ quadrilateral = Menu(menu, tearoff = False) # Quadrilateral menu options
 trapezoid = Menu(menu, tearoff = False) # Trapezoid menu options
 triangles = Menu(menu, tearoff = False) # Triangles menu options
 mel = Menu(menu, tearoff = False) # Mel menu options
-mel_color = Menu(menu, tearoff = False) # Color mel's menu options
 board_all_in_color = Menu(menu, tearoff = False) # Board all in color menu options
-mel_size = Menu(menu, tearoff = False) # Size mel
 settings = Menu(menu, tearoff = False) # Main settings menu
 settings_fullscreen = Menu(menu, tearoff = False) # Settings fullscreen's menu
 settings_view = Menu(menu, tearoff = False) # Settings view's menu
@@ -387,66 +275,46 @@ configurate = Menu(menu, tearoff = False) # Config menu
 # Tools menu
 menu.add_cascade(label = '🖊️Инструменты🖊️', menu = tools)
 tools.add_separator()
-tools.add_command(label='🐁Мышь🐁', command = mouse)
 tools.add_cascade(label='🏏Мел🏏', menu = mel)
 mel.add_separator()
-mel.add_cascade(label = '📒Цвета📒', menu = mel_color)
-mel_color.add_separator()
-mel_color.add_cascade(label='Белый', command = white_mel)
-mel_color.add_cascade(label='Серый', command = grey_mel)
-mel_color.add_cascade(label='Чёрный', command = black_mel)
-mel_color.add_cascade(label='Фиолетовый', command = purple_mel)
-mel_color.add_cascade(label='Синий', command = blue_mel)
-mel_color.add_cascade(label='Мажента', command = magenta_mel)
-mel_color.add_cascade(label='Розовый', command = rose_mel)
-mel_color.add_cascade(label='Красный', command = red_mel)
-mel_color.add_cascade(label='Циановый', command = cyan_mel)
-mel_color.add_cascade(label='Оранжевый', command = orange_mel)
-mel_color.add_cascade(label='Тёмно-зелёный', command = dark_green_mel)
-mel_color.add_cascade(label='Зелённый', command = green_mel)
-mel_color.add_cascade(label='Жёлтый', command = yellow_mel)
-mel_color.add_separator()
-
-mel.add_cascade(label = '📐Размер📐', menu = mel_size)
-mel_size.add_separator()
-mel_size.add_command(label = "1", command = mel_size_1)
-mel_size.add_command(label = "5", command = mel_size_5)
-mel_size.add_command(label = "7", command = mel_size_7)
-mel_size.add_command(label = "10", command = mel_size_10)
-mel_size.add_command(label = "15", command = mel_size_15)
-mel_size.add_command(label = "20", command = mel_size_20)
-mel_size.add_command(label = "25", command = mel_size_25)
-mel_size.add_command(label = "30", command = mel_size_30)
-mel_size.add_command(label = "35", command = mel_size_35)
-mel_size.add_command(label = "40", command = mel_size_40)
-mel_size.add_command(label = "45", command = mel_size_45)
-mel_size.add_command(label = "50", command = mel_size_50)
-mel_size.add_command(label = "55", command = mel_size_55)
-mel_size.add_command(label = "60", command = mel_size_60)
-mel_size.add_command(label = "65", command = mel_size_65)
-mel_size.add_command(label = "70", command = mel_size_70)
-mel_size.add_command(label = "75", command = mel_size_75)
-mel_size.add_command(label = "80", command = mel_size_80)
-mel_size.add_command(label = "85", command = mel_size_85)
-mel_size.add_command(label = "90", command = mel_size_90)
-mel_size.add_command(label = "95", command = mel_size_95)
-mel_size.add_command(label = "100", command = mel_size_100)
+mel.add_cascade(label='Белый цвет', command = white_mel)
+mel.add_cascade(label='Серый цвет', command = grey_mel)
+mel.add_cascade(label='Чёрный цвет', command = black_mel)
+mel.add_cascade(label='Фиолетовый цвет', command = purple_mel)
+mel.add_cascade(label='Синий цвет', command = blue_mel)
+mel.add_cascade(label='Мажента цвет', command = magenta_mel)
+mel.add_cascade(label='Розовый цвет', command = rose_mel)
+mel.add_cascade(label='Красный цвет', command = red_mel)
+mel.add_cascade(label='Циановый цвет', command = cyan_mel)
+mel.add_cascade(label='Оранжевый цвет', command = orange_mel)
+mel.add_cascade(label='Тёмно-зелёный цвет', command = dark_green_mel)
+mel.add_cascade(label='Зелённый цвет', command = green_mel)
+mel.add_cascade(label='Жёлтый цвет', command = yellow_mel)
 mel.add_separator()
-mel_size.add_separator()
+mel.add_cascade(label='Палитра', command = palitra)
+mel.add_separator()
 
 tools.add_cascade(label='Создание фигур', menu = figures)
+figures.add_separator()
 figures.add_cascade(label = "Треугольники", menu = triangles)
+triangles.add_separator()
 triangles.add_command(label = "Равнобедренный треугольник", command = equilateral_triangle)
 triangles.add_command(label = "Произвольный треугольник", command = random_triangle)
 triangles.add_command(label = "Прямоугольный треугольник", command = right_triangle)
+triangles.add_separator()
 
 figures.add_cascade(label = "Четырёхугольники", menu = quadrilateral)
+quadrilateral.add_separator()
 quadrilateral.add_command(label = "Параллелограмм", command = parallelogram)
 quadrilateral.add_cascade(label = "Трапеция", menu = trapezoid)
+trapezoid.add_separator()
 trapezoid.add_command(label = "Равнобедренная трапеция", command = isosceles_trapezoid)
 trapezoid.add_command(label = "Произвольная трапеция", command = arbitrary_trapezoid)
 trapezoid.add_command(label = "Прямоугольная трапеция", command = rectangular_trapezoid)
+trapezoid.add_separator()
 quadrilateral.add_command(label = "Произвольный четырёхугольник", command = arbitrary_quadrilateral)
+quadrilateral.add_separator()
+figures.add_separator()
 tools.add_separator()
 
 tools.add_command(label='🥻Тряпка🥻',  command = eraser)
@@ -485,13 +353,15 @@ board_all_in_color.add_cascade(label='Циановый', command = cyan_mel_all)
 board_all_in_color.add_cascade(label='Оранжевый', command = orange_mel_all)
 board_all_in_color.add_cascade(label='Зелённый', command = green_mel_all)
 board_all_in_color.add_cascade(label='Жёлтый', command = yellow_mel_all)
+board_all_in_color.add_separator()
+board_all_in_color.add_cascade(label='Палитра', command = palitra_all)
 settings_view.add_separator()
 board_all_in_color.add_separator()
 
 # Configure
 menu.add_cascade(label = "📄Конфигурация📄", menu = configurate)
 configurate.add_separator()
-configurate.add_cascade(label='❕Информация❕', command = info)
+configurate.add_cascade(label='❕Справка❕', command = info)
 configurate.add_cascade(label='❔Спонсор❔', command = sponsor)
 configurate.add_separator()
 configurate.add_cascade(label='🚪Закрыть доску🚪', command = exit)
