@@ -15,7 +15,7 @@ w["bg"] = "#0A5432"
 w.eval('tk::PlaceWindow . center') # Window in center
 w.geometry("1000x700")
 w.attributes('-fullscreen', True)
-w.iconbitmap(r"C:\Users\user\Desktop\все файлы\Python\Python projects\Электронная доска\icon.ico")
+w.iconbitmap(r"icon.ico")
 
 # Func colors
 def white_mel():
